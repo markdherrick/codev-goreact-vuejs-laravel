@@ -12,8 +12,11 @@
     "build": "node build/build.js"
   },
   "dependencies": {
+    "@mdi/font": "^5.9.55",
+    "axios": "^0.21.1",
     "vue": "^2.5.2",
-    "vue-router": "^3.0.1"
+    "vue-router": "^3.0.1",
+    "vuetify": "^2.5.8"
   },
   "devDependencies": {
     "autoprefixer": "^7.1.2",

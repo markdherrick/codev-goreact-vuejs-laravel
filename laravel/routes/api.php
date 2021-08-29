@@ -17,3 +17,11 @@ use Illuminate\Support\Facades\Route;
 Route::middleware('auth:api')->get('/user', function (Request $request) {
     return $request->user();
 });
+
+Route::get('todo', 'TodosController@index');
+Route::group(['prefix' => 'todo'], function () {
+    Route::post('add', 'TodosController@store');
+    Route::get('edit/{id}', 'TodosController@edit');
+    Route::post('update/{id}', 'TodosController@update');
+    Route::delete('delete/{id}', 'TodosController@destroy');
+});
